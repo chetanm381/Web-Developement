@@ -1,0 +1,25 @@
+body {
+    background-image: url("landing page/background.gif");
+}
+
+div {
+    border: groove whitesmoke;
+    border-radius: 90px;
+    border-color: rgb(9, 207, 221);
+    border-width: 5px;
+    padding-left: 75px;
+}
+
+.color {
+    padding: left 20px;
+    color: whitesmoke;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#contact {
+    padding-left: 20px;
+}
+
+.No {
+    color: brown;
+}
