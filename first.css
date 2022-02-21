@@ -2,16 +2,19 @@ body {
     background-image: url("background.gif");
 }
 
+table {
+    width: 100%;
+}
+
 div {
     border: groove whitesmoke;
     border-radius: 90px;
     border-color: rgb(9, 207, 221);
     border-width: 5px;
-    padding-left: 75px;
+    padding-left: 50px;
 }
 
 .color {
-    padding: left 20px;
     color: whitesmoke;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -22,4 +25,8 @@ div {
 
 .No {
     color: brown;
+}
+
+#logo {
+    padding-left: 30px;
 }
