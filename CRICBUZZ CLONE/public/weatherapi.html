@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+      integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  <style>body{
+    background-image: linear-gradient(to right, #DECBA4, #3E5151);
+ }</style>
+   
+
+    <title>Weather at your location</title>
+  </head>
+  <body>
+
+    <div class="Container">
+      <div class="wave -one"></div>
+      <div class="wave -two"></div>
+      <div class="wave -three"></div>
+      <div id="weathercon">
+        <i class="fas fa-sun" style="color: yellow"></i>
+      </div>
+      <div id="location">
+        <h1><i class="fas fa-street-view"></i>{%city%} , {%country%}</h1>
+      </div>
+      <p id="date">WED | 23 OCT | 10.49 AM</p>
+    </div>
+    <div id="temp">
+      <h1>{%temp%}&#8451;</h1>
+      <p id="minmax">{%tempmin%}&#8451; | {%tempmax%}&#8451;</p>
+    </div>
+    <script>
+      
+      const date = document.getElementById("date");
+      const weathercon = document.getElementById("weathercon");
+      const weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      const Months = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "June",
+        "Jul",
+        "Aug",
+        "Sept",
+        "Oct",
+        "Nov",
+        "Dec",
+      ];
+      let day = () => {
+        let d = new Date();
+        var hr = d.getHours();
+        var min = d.getMinutes();
+        if (min < 10) {
+          min = "0" + min;
+        }
+        var ampm = "AM";
+        if (hr > 12) {
+          hr -= 12;
+          ampm = "PM";
+        }
+        return (
+          weekday[d.getDay()].toUpperCase() +
+          " | " +
+          Months[d.getMonth()].toUpperCase() +
+          " " +
+          d.getDate() +
+          " | " +
+          hr +
+          ":" +
+          min +
+          " " +
+          ampm
+        );
+      };
+      date.innerHTML=day();
+    </script>
+  </body>
+</html>
